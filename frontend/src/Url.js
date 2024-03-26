@@ -1,0 +1,1 @@
+export const baseurl = "https://dashboard-8hzz.onrender.com"

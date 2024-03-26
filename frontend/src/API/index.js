@@ -1,18 +1,20 @@
+import {baseurl} from "../Url"
+
 export const getOrders = () => {
-  return fetch("https://dashboard-8hzz.onrender.com/carts/1").then((res) => res.json());
+  return fetch(`${baseurl}/carts/1`).then((res) => res.json());
 };
 
 export const getRevenue = () => {
-  return fetch("https://dashboard-8hzz.onrender.com/carts").then((res) => res.json());
+  return fetch(`${baseurl}/carts`).then((res) => res.json());
 };
 
 export const getInventory = () => {
-  return fetch("https://dashboard-8hzz.onrender.com/products").then((res) => res.json());
+  return fetch(`${baseurl}/products`).then((res) => res.json());
 };
 
 export const getCustomers = () => {
-  return fetch("https://dashboard-8hzz.onrender.com/users").then((res) => res.json());
+  return fetch(`${baseurl}/users`).then((res) => res.json());
 };
 export const getComments = () => {
-  return fetch("https://dashboard-8hzz.onrender.com/comments").then((res) => res.json());
+  return fetch(`${baseurl}/comments`).then((res) => res.json());
 };
