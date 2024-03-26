@@ -3,13 +3,13 @@ const User = require("../Models/Users.model");
 const { MongoClient } = require("mongodb");
 
 // Connection URI
-const uri = "mongodb://localhost:27017";
+const uri = "mongodb+srv://mmahaece07:Maha1431@cluster0.iei1qfm.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0";
 
 // Database Name
 const dbName = "test";
 
 // Collection Name (Assuming the collection is called "users")
-const collectionName = "Users";
+const collectionName = "users";
 
 async function connectAndFetchData() {
   const client = new MongoClient(uri, {
@@ -32,7 +32,7 @@ async function connectAndFetchData() {
 
     // Query for all documents in the collection
     users = await collection.find({}).toArray();
-
+   console.log(users);
     // Print retrieved user data
     // console.log(users);
     // Remove the _id field from each document

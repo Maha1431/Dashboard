@@ -18,7 +18,8 @@ const User = require('../Models/Users.model');
 const { MongoClient, ObjectId } = require('mongodb');
 
 // Connection URI
-const uri = 'mongodb://localhost:27017';
+const uri = "mongodb+srv://mmahaece07:Maha1431@cluster0.iei1qfm.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0";
+
 
 // Database Name
 const dbName = 'test';
