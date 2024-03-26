@@ -5,7 +5,7 @@ require("dotenv").config();
 
 
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = "mongodb://127.0.0.1:27017/test"
+const MONGO_URI = "mongodb+srv://mmahaece07:Maha1431@cluster0.iei1qfm.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0";
 let server;
 
 mongoose.connect(MONGO_URI).then(() => {
