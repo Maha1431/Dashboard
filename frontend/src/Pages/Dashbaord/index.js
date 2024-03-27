@@ -40,19 +40,24 @@ function Dashboard() {
 
 
   useEffect(() => {
-    getOrders().then((res) => {
-      setOrders(res.total);
-      setRevenue(res.discountedTotal);
- 
-    });
-    getInventory().then((res) => {
-      setInventory(res.total);
-    });
-    getCustomers().then((res) => {
-      setCustomers(res.total);
-    });
-  }, []);
+    async function fetchData() {
+      try {
+        const ordersData = await getOrders();
+        setOrders(ordersData.total);
+        setRevenue(ordersData.discountedTotal);
 
+        const inventoryData = await getInventory();
+        setInventory(inventoryData.total);
+
+        const customersData = await getCustomers();
+        setCustomers(customersData.total);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
 
   
   return (
