@@ -21,13 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(compression());
 
 // enable cors
-app.use(cors(
-    {
-        origin: ["https://dashboard-nva9.vercel.app/"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+app.use(cors());
 app.options("*", cors());
 
 
